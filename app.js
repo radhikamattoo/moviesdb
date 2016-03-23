@@ -32,6 +32,18 @@ app.get('/movies/add', function(req, res){
 });
 
 app.post('/movies/add', function(req,res){
+	var newMovie = new Movie({
+		title : req.body.title,
+		director : req.body.director,
+		year : req.body.year
+	});
+	newMovie.save(function(err, movie, count){
+		if(err === null){
+			res.redirect('/movies');
+		}else{
+			console.log(err, movie);
+		}
+	});
 
 });
 
