@@ -1,0 +1,17 @@
+<h1 text-align="center"> Movies! </h1>
+
+<form method="GET" action="">
+  Director: <input type="text" name="director">
+  <input type="submit">
+</form>
+
+<table border="1" style="width:100%">
+  {{#each movies}}
+    <tr>
+      <td> {{title}} </td>
+      <td> {{director}}</td>
+      <td> {{year}}</td>
+    </tr>
+  {{/each}}
+</table>
+<a href="movies/add"> Add a Movie! </a>
