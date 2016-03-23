@@ -44,7 +44,6 @@ app.post('/movies/add', function(req,res){
 			console.log(err, movie);
 		}
 	});
-
 });
 
 app.listen(3000);
